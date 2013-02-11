@@ -1,0 +1,4 @@
+[Project]
+Name=2DShooter
+Manager=KDevCMakeManager
+VersionControl=kdevgit
