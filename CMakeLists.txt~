@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(2dshooter)
 
-add_executable(2dshooter lobbyactivity.cpp client.cpp server.cpp netmanager.cpp startscreenactivity.cpp gametype.cpp gameactivity.cpp pugixml.cpp optionsmenuactivity.cpp mainmenuactivity.cpp button.cpp menuactivity.cpp activity.cpp game.cpp main.cpp)
+add_executable(2dshooter client.cpp server.cpp netmanager.cpp startscreenactivity.cpp gametype.cpp gameactivity.cpp pugixml.cpp optionsmenuactivity.cpp mainmenuactivity.cpp button.cpp menuactivity.cpp activity.cpp game.cpp main.cpp)
 target_link_libraries( 2dshooter SDL pthread)
 target_link_libraries( 2dshooter SDL_ttf pthread)
 target_link_libraries( 2dshooter SDL_net pthread)

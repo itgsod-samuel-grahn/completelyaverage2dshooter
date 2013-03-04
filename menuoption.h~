@@ -1,0 +1,14 @@
+#ifndef MENUOPTION_H
+#define MENUOPTION_H
+typedef void (*function)();
+
+class MenuOption
+{
+
+public:
+MenuOption(char* title, void(*func)());
+void(&f)();
+char* title;
+};
+
+#endif // MENUOPTION_H

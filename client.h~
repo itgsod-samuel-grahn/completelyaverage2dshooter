@@ -1,0 +1,18 @@
+#ifndef CLIENT_H
+#define CLIENT_H
+
+#include "netmanager.h"
+
+class Client : public NetManager
+{
+
+public:
+Client();
+void Update();
+void SendData(PlayerData* data);
+PlayerData** GetPlayers();
+private:
+  IPaddress serverAddress;
+};
+
+#endif // CLIENT_H

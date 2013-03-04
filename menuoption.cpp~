@@ -1,0 +1,8 @@
+#include "menuoption.h"
+
+MenuOption::MenuOption(char* title, void(*func)() )
+{
+  this->title = title;
+  this->f = func;
+}
+

@@ -1,0 +1,25 @@
+#ifndef GAMEACTIVITY_H
+#define GAMEACTIVITY_H
+
+#include "activity.h"
+#include "netmanager.h"
+enum GameTypeName
+{
+  DEATHMATCH
+};
+
+class GameActivity : public Activity
+{
+
+public:
+void Draw();
+void Handle(SDL_Event event);
+void Update();
+void SetGameType(GameTypeName g);
+GameActivity(Game* g, NetManager* manager);
+private:
+  NetManager* manager;
+  PlayerData* myData;
+};
+
+#endif // GAMEACTIVITY_H

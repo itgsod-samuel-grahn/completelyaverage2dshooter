@@ -1,0 +1,26 @@
+#ifndef ACTIVITY_H
+#define ACTIVITY_H
+
+#include "game.h"
+#include <SDL/SDL_ttf.h>
+
+
+class Activity
+{
+  
+public:
+  
+  Activity(Game* g);
+  virtual void Update() = 0;
+  virtual void Handle(SDL_Event event) = 0;
+  virtual void Draw() = 0;
+  TTF_Font *font;
+  void ApplySurface(int x, int y, SDL_Surface* source, SDL_Surface* destination);
+  bool KeyIsPressed(Uint8 key);
+  bool pressedKeys[];
+protected:  
+  Game* game;
+  ~Activity();
+};
+
+#endif // ACTIVITY_H
